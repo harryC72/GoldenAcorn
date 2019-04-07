@@ -3,17 +3,23 @@ import ReactDOM from 'react-dom';
 import Display from './Display'
 import PropTypes from 'prop-types';
 
-const Button = (props) =>{
+const Button = ({handleClick ,changer, buttonValue}) =>{
 
   Button.PropTypes = {
     changer = PropTypes.number
   }
 
   return(
-    <button onClick={() => props.buy(props.changer)}>Eat one</button>
+    <button onClick={() => handleClick(changer)}>{buttonValue}</button>
 
   )
 }
 
 export default Button;
 
+
+// const Button = (props) => {
+//   return (<button onClick={props.handleClick}>{props.value}</button>);
+// }
+
+// export default Button
